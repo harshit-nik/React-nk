@@ -22,23 +22,17 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      'https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4743207&lng=77.508911&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
+      'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4743207&lng=77.508911&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
     );
 
     const json = await data.json();
 
     // * optional chaining
     // * never allow undefined to go into state
-    const restaurants =
-      json?.data?.cards
-        ?.find(
-          (card) =>
-            card?.card?.card?.gridElements?.infoWithStyle?.restaurants
-        )
-        ?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+   
 
-    setListOfRestaurants(restaurants);
-    setFilteredRestaurant(restaurants);
+    setListOfRestaurants(json ?. data ?. cards[4] ?. card ?. card ?. gridElements ?. infoWithStyle ?. restaurants);
+    setFilteredRestaurant(json ?. data ?. cards[4] ?. card ?. card ?. gridElements ?. infoWithStyle ?. restaurants);
   };
 
   // * Conditional Rendering
