@@ -1,0 +1,32 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "this is react by Harshit katiyar",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshit-nik/React-nk.git"
+  },
+  "keywords": [
+    "react",
+    "hi",
+    "harshit"
+  ],
+  "author": "Harshit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshit-nik/React-nk/issues"
+  },
+  "homepage": "https://github.com/harshit-nik/React-nk#readme",
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

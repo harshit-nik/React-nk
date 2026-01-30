@@ -1,0 +1,6 @@
+ coomm 1:-
+ // when ever a stae variable update react rerender the component
+  // if it was a simple cont restraunts the ui will nat update
+
+  
+ 
