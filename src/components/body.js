@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import RestaurantCard from './RestaurantCard';
-import Shimmer from './Shimmer';
+import RestaurantCard from "./RestaurantCard";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   // * React Hook -> A normal JavaScript function which is given to us by React (or) Normal JS utility functions
@@ -21,18 +21,30 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4743207&lng=77.508911&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
-    );
+    try {
+      const data = await fetch(
+        'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4743207&lng=77.508911&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
+      );
 
-    const json = await data.json();
+      const json = await data.json();
 
-    // * optional chaining
-    // * never allow undefined to go into state
-   
+      // * optional chaining
+      // * never allow undefined to go into state
+      // 🔥 FIND restaurant grid safely
+      const restaurantCard = json?.data?.cards?.find(
+        (card) =>
+          card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      );
 
-    setListOfRestaurants(json ?. data ?. cards[4] ?. card ?. card ?. gridElements ?. infoWithStyle ?. restaurants);
-    setFilteredRestaurant(json ?. data ?. cards[4] ?. card ?. card ?. gridElements ?. infoWithStyle ?. restaurants);
+      const restaurants =
+        restaurantCard?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants || [];
+
+      setListOfRestaurants(restaurants);
+      setFilteredRestaurant(restaurants);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   // * Conditional Rendering
@@ -40,10 +52,11 @@ const Body = () => {
   //   return <Shimmer />;
   // }
 
-  // ✅ safe check (no crash)
-  if (!Array.isArray(filteredRestaurant) || filteredRestaurant.length === 0) {
-    return <Shimmer />;
-  }
+  // ✅ shimmer only when data is loading
+if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0) {
+  return <Shimmer />;
+}
+
 
   return (
     <div className="body">
@@ -98,9 +111,16 @@ const Body = () => {
       <div className="res-container">
         {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
 
-        {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
+        {filteredRestaurant.length === 0 ? (
+          <h2>No restaurants found 😕</h2>
+        ) : (
+          filteredRestaurant.map((restaurant) => (
+            <RestaurantCard
+              key={restaurant.info.id}
+              resData={restaurant}
+            />
+          ))
+        )}
       </div>
     </div>
   );
