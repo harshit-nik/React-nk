@@ -4,7 +4,7 @@
   "description": "this is react by Harshit katiyar",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir build",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
