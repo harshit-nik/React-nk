@@ -1,3 +1,9 @@
+const defaultMenu = [
+  { id: "901", name: "Veg Burger", price: 120 },
+  { id: "902", name: "French Fries", price: 90 },
+  { id: "903", name: "Cold Drink", price: 60 },
+];
+
 let resList = {
   data: [
     {
@@ -9,6 +15,7 @@ let resList = {
         locality: "Minto Road",
         areaName: "Connaught Place",
         costForTwo: "₹200 for two",
+
         cuisines: ["Thalis", "North Indian", "Biryani"],
         avgRating: 4.3,
         parentId: "4925",
@@ -22,6 +29,7 @@ let resList = {
           lastMileTravelString: "4.6 km",
           iconType: "ICON_TYPE_EMPTY",
         },
+
         availability: {
           nextCloseTime: "2025-10-01 23:59:00",
           opened: true,
@@ -76,6 +84,29 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
+      menu: [
+        {
+          id: "101",
+          name: "Margherita Pizza",
+          price: 250,
+          image:
+            "https://images.unsplash.com/photo-1601924582975-7e67cfa0a2c0?w=400",
+        },
+        {
+          id: "102",
+          name: "Veggie Supreme",
+          price: 350,
+          image:
+            "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400",
+        },
+        {
+          id: "103",
+          name: "Garlic Bread",
+          price: 120,
+          image:
+            "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=400",
+        },
+      ],
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -84,6 +115,7 @@ let resList = {
         type: "WEBLINK",
       },
     },
+
     {
       info: {
         id: "804724",
@@ -157,6 +189,30 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
+      menu: [
+        {
+          id: "201",
+          name: "Zinger Burger",
+          price: 180,
+          image:
+            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+        },
+        {
+          id: "202",
+          name: "Chicken Bucket",
+          price: 499,
+          image:
+            "https://images.unsplash.com/photo-1604908554020-5a3c6c4b4b5d?w=400",
+        },
+        {
+          id: "203",
+          name: "French Fries",
+          price: 120,
+          image:
+            "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400",
+        },
+      ],
+
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -225,6 +281,36 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
+      menu: [
+        {
+          id: "301",
+          name: "McAloo Tikki Burger",
+          price: 80,
+          image:
+            "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400",
+        },
+        {
+          id: "302",
+          name: "McChicken Burger",
+          price: 150,
+          image:
+            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+        },
+        {
+          id: "303",
+          name: "French Fries",
+          price: 120,
+          image:
+            "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400",
+        },
+        {
+          id: "304",
+          name: "Coke",
+          price: 60,
+          image:
+            "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+        },
+      ],
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -290,6 +376,29 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
+      menu: [
+        {
+          id: "401",
+          name: "Whopper Burger",
+          price: 220,
+          image:
+            "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400",
+        },
+        {
+          id: "402",
+          name: "Veg Burger",
+          price: 150,
+          image:
+            "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400",
+        },
+        {
+          id: "403",
+          name: "Coke",
+          price: 60,
+          image:
+            "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+        },
+      ],
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -372,6 +481,7 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
+      menu: defaultMenu,
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -466,6 +576,7 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
+      menu: defaultMenu,
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -531,6 +642,7 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
+      menu: defaultMenu,
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -615,6 +727,7 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
+      menu: defaultMenu,
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -625,6 +738,5 @@ let resList = {
     },
   ],
 };
-
 
 export default resList;

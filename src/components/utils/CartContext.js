@@ -11,8 +11,10 @@ export const CartProvider = ({ children }) => {
     if (existingItem) {
       setCartItems(
         cartItems.map((i) =>
-          i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i,
-        ),
+          i.id === item.id
+            ? { ...i, quantity: i.quantity + 1 }
+            : i
+        )
       );
     } else {
       setCartItems([...cartItems, { ...item, quantity: 1 }]);
@@ -28,10 +30,12 @@ export const CartProvider = ({ children }) => {
   };
 
   const increaseQuantity = (id) => {
-    setCartItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
-      ),
+    setCartItems(
+      cartItems.map((item) =>
+        item.id === id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      )
     );
   };
 
@@ -39,9 +43,11 @@ export const CartProvider = ({ children }) => {
     setCartItems(
       cartItems
         .map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity - 1 } : item,
+          item.id === id
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
         )
-        .filter((item) => item.quantity > 0),
+        .filter((item) => item.quantity > 0)
     );
   };
 
