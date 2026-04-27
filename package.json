@@ -24,7 +24,8 @@
   "homepage": "https://github.com/harshit-nik/React-nk#readme",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.14.2"
   },
   "devDependencies": {
     "parcel": "^2.8.3",
