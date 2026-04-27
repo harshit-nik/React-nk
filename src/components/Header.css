@@ -1,0 +1,24 @@
+/* Header & Navigation */
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav-items {
+  padding-right: 58px;
+  padding-top: 35px;
+}
+
+.nav-items ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items ul li {
+  margin: 10px;
+}

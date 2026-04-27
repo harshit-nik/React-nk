@@ -1,20 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import "./Body.css";
 
 const Body = () => {
-  // * React Hook -> A normal JavaScript function which is given to us by React (or) Normal JS utility functions
-  // * useState() - Super Powerful variable
-  // * useEffect() -
-
-  // * State Variable - Super Powerful variable
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
-  const [searchText, setSearchText] = useState('');
-
-  // * Whenever a state variable updates or changes, react triggers a reconciliation cycle(re-renders the component)
-  console.log('Body rendered');
+  console.log("Body rendered");
 
   useEffect(() => {
     fetchData();
@@ -23,22 +17,18 @@ const Body = () => {
   const fetchData = async () => {
     try {
       const data = await fetch(
-        'https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4743207&lng=77.508911&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING'
+        "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.4743207&lng=77.508911&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
       );
 
       const json = await data.json();
 
-      // * optional chaining
-      // * never allow undefined to go into state
-      // 🔥 FIND restaurant grid safely
       const restaurantCard = json?.data?.cards?.find(
-        (card) =>
-          card?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        (card) => card?.card?.card?.gridElements?.infoWithStyle?.restaurants,
       );
 
       const restaurants =
-        restaurantCard?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants || [];
+        restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants ||
+        [];
 
       setListOfRestaurants(restaurants);
       setFilteredRestaurant(restaurants);
@@ -47,23 +37,14 @@ const Body = () => {
     }
   };
 
-  // * Conditional Rendering
-  // if (listOfRestaurants.length === 0) {
-  //   return <Shimmer />;
-  // }
 
-  // ✅ shimmer only when data is loading
-if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0) {
+  
+if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0)
   return <Shimmer />;
-}
-
 
   return (
     <div className="body">
-      {/* <div className="search-container">
-        <input type="text" placeholder="Search Food or Restaurant" />
-        <button>Search</button>
-      </div> */}
+    
       <div className="filter">
         <div className="search">
           <input
@@ -82,9 +63,7 @@ if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0) {
               console.log(searchText);
 
               const filteredRestaurant = listOfRestaurants.filter((res) =>
-                res.info.name
-                  .toLowerCase()
-                  .includes(searchText.toLowerCase())
+                res.info.name.toLowerCase().includes(searchText.toLowerCase()),
               );
 
               setFilteredRestaurant(filteredRestaurant);
@@ -98,7 +77,7 @@ if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0) {
           onClick={() => {
             // * Filter logic
             const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
+              (res) => res.info.avgRating > 4,
             );
 
             setFilteredRestaurant(filteredList);
@@ -109,16 +88,12 @@ if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0) {
         </button>
       </div>
       <div className="res-container">
-        {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
 
         {filteredRestaurant.length === 0 ? (
           <h2>No restaurants found 😕</h2>
         ) : (
           filteredRestaurant.map((restaurant) => (
-            <RestaurantCard
-              key={restaurant.info.id}
-              resData={restaurant}
-            />
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
           ))
         )}
       </div>

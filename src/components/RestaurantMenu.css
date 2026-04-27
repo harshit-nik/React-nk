@@ -1,0 +1,21 @@
+.menu {
+  padding: 20px;
+}
+
+.menu h1 {
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-item button {
+  background-color: #ff5200;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+}

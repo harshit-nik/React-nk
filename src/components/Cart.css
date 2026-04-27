@@ -1,0 +1,30 @@
+.cart {
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.cart-item button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #ff5200;
+  color: white;
+}
+
+.cart-item span {
+  font-weight: bold;
+}
+
+.cart h2 {
+  margin-top: 20px;
+}
