@@ -25,12 +25,6 @@ This project demonstrates core frontend concepts like routing, state management,
 
 ---
 
-## 📸 Screenshots
-
-(Add screenshots here)
-
----
-
 ## 🌐 Live Demo
 
 ⚠️ Deployment in progress (API limitations due to CORS restrictions)
