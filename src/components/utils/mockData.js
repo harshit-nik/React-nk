@@ -84,29 +84,52 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
-      menu: [
-        {
-          id: "101",
-          name: "Margherita Pizza",
-          price: 250,
-          image:
-            "https://images.unsplash.com/photo-1601924582975-7e67cfa0a2c0?w=400",
-        },
-        {
-          id: "102",
-          name: "Veggie Supreme",
-          price: 350,
-          image:
-            "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400",
-        },
-        {
-          id: "103",
-          name: "Garlic Bread",
-          price: 120,
-          image:
-            "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=400",
-        },
-      ],
+ menu: {
+  recommended: [
+    {
+      id: "101",
+      name: "Rajma Chawal",
+      price: 149,
+      image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400",
+    },
+    {
+      id: "102",
+      name: "Paneer Thali",
+      price: 199,
+      image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400",
+    },
+  ],
+
+  newlyAdded: [
+    {
+      id: "103",
+      name: "Dal Makhani Meal",
+      price: 179,
+      image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400",
+    },
+    {
+      id: "104",
+      name: "Shahi Paneer Combo",
+      price: 229,
+      image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400",
+    },
+  ],
+
+  beverages: [
+    {
+      id: "105",
+      name: "Sweet Lassi",
+      price: 60,
+      image: "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=400",
+    },
+    {
+      id: "106",
+      name: "Cold Coffee",
+      price: 90,
+      image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400",
+    },
+  ],
+},
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },
@@ -376,29 +399,75 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
-      menu: [
-        {
-          id: "401",
-          name: "Whopper Burger",
-          price: 220,
-          image:
-            "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400",
-        },
-        {
-          id: "402",
-          name: "Veg Burger",
-          price: 150,
-          image:
-            "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400",
-        },
-        {
-          id: "403",
-          name: "Coke",
-          price: 60,
-          image:
-            "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
-        },
-      ],
+      menu: {
+  recommended: [
+    {
+      id: "401",
+      name: "Whopper Burger",
+      price: 220,
+      image:
+        "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400",
+    },
+    {
+      id: "402",
+      name: "Chicken Whopper",
+      price: 260,
+      image:
+        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+    },
+  ],
+
+  newlyAdded: [
+    {
+      id: "403",
+      name: "Cheese Burst Burger",
+      price: 190,
+      image:
+        "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400",
+    },
+    {
+      id: "404",
+      name: "Double Patty Burger",
+      price: 280,
+      image:
+        "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400",
+    },
+  ],
+
+  sides: [
+    {
+      id: "405",
+      name: "French Fries",
+      price: 99,
+      image:
+        "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400",
+    },
+    {
+      id: "406",
+      name: "Veg Nuggets",
+      price: 129,
+      image:
+        "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400",
+    },
+  ],
+
+  beverages: [
+    {
+      id: "407",
+      name: "Coke",
+      price: 60,
+      image:
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+    },
+    {
+      id: "408",
+      name: "Chocolate Shake",
+      price: 120,
+      image:
+        "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400",
+    },
+  ],
+},
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
       },

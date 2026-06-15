@@ -6,6 +6,8 @@ import "./Header.css";
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
 
+
+
   return (
     <div className="header">
       <div className="logo-container">
@@ -14,17 +16,23 @@ const Header = () => {
 
       <div className="nav-items">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/cart">Cart</Link></li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="/cart">Cart</Link>
+          </li>
 
           <button
             className="loginBtn"
             onClick={() => {
-              setBtnNameReact(
-                btnNameReact === "Login" ? "Logout" : "Login"
-              );
+              setBtnNameReact(btnNameReact === "Login" ? "Logout" : "Login");
             }}
           >
             {btnNameReact}

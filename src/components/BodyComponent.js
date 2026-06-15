@@ -8,8 +8,6 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  console.log("Body rendered");
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -30,6 +28,8 @@ const Body = () => {
         restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants ||
         [];
 
+      console.log(restaurants[0]);
+
       setListOfRestaurants(restaurants);
       setFilteredRestaurant(restaurants);
     } catch (error) {
@@ -37,14 +37,11 @@ const Body = () => {
     }
   };
 
-
-  
-if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0)
-  return <Shimmer />;
+  if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0)
+    return <Shimmer />;
 
   return (
     <div className="body">
-    
       <div className="filter">
         <div className="search">
           <input
@@ -88,7 +85,6 @@ if (!Array.isArray(listOfRestaurants) || listOfRestaurants.length === 0)
         </button>
       </div>
       <div className="res-container">
-
         {filteredRestaurant.length === 0 ? (
           <h2>No restaurants found 😕</h2>
         ) : (
