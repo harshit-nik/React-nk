@@ -58,13 +58,17 @@ const RestaurantMenu = () => {
             <div key={categoryName}>
               <h2
                 style={{
-                  marginTop: "25px",
+                  marginTop: "15px",
                   cursor: "pointer",
                   display: "flex",
                   justifyContent: "space-between",
-                  padding: "10px",
+                  alignItems: "center",
+                  padding: "18px",
                   background: "#fff",
-                  borderRadius: "8px",
+                  borderRadius: "12px",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                  fontSize: "18px",
+                  fontWeight: "700",
                 }}
                 onClick={() =>
                   setOpenCategory(
@@ -117,6 +121,8 @@ const RestaurantMenu = () => {
                     </div>
                   );
                 })}
+
+                <div className="category-divider"></div>
             </div>
           ))}
     </div>

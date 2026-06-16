@@ -95,3 +95,10 @@
 .qty-controls span {
   font-weight: bold;
 }
+
+.category-divider {
+  height: 16px;
+  background: #f1f1f6;
+  margin: 15px 0;
+  border-radius: 8px;
+}

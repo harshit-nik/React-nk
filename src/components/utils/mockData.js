@@ -212,29 +212,61 @@ let resList = {
         },
         ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
       },
-      menu: [
-        {
-          id: "201",
-          name: "Zinger Burger",
-          price: 180,
-          image:
-            "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
-        },
-        {
-          id: "202",
-          name: "Chicken Bucket",
-          price: 499,
-          image:
-            "https://images.unsplash.com/photo-1604908554020-5a3c6c4b4b5d?w=400",
-        },
-        {
-          id: "203",
-          name: "French Fries",
-          price: 120,
-          image:
-            "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400",
-        },
-      ],
+      menu: {
+  recommended: [
+    {
+      id: "201",
+      name: "Zinger Burger",
+      price: 180,
+      image:
+        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400",
+    },
+  ],
+
+  buckets: [
+    {
+      id: "202",
+      name: "Chicken Bucket",
+      price: 499,
+      image:
+        "https://images.unsplash.com/photo-1604908554020-5a3c6c4b4b5d?w=400",
+    },
+    {
+      id: "204",
+      name: "Hot Wings Bucket",
+      price: 399,
+      image:
+        "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400",
+    },
+  ],
+
+  sides: [
+    {
+      id: "203",
+      name: "French Fries",
+      price: 120,
+      image:
+        "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400",
+    },
+    {
+      id: "205",
+      name: "Chicken Popcorn",
+      price: 149,
+      image:
+        "https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?w=400",
+    },
+  ],
+
+  beverages: [
+    {
+      id: "206",
+      name: "Pepsi",
+      price: 60,
+      image:
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=400",
+    },
+  ],
+},
 
       analytics: {
         context: "seo-data-2a8d38c7-17dd-4507-a117-0df9404ce870",
