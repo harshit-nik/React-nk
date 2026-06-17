@@ -1,24 +1,52 @@
-/* Header & Navigation */
 .header {
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  align-items: center;
+  padding: 0 40px;
+  height: 90px;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
-  width: 200px;
-}
-
-.nav-items {
-  padding-right: 58px;
-  padding-top: 35px;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
 }
 
 .nav-items ul {
   display: flex;
-  list-style-type: none;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-items ul li {
-  margin: 10px;
+.nav-items a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.nav-items a:hover {
+  color: #ff5200;
+}
+
+.loginBtn {
+  border: none;
+  background: #ff5200;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.loginBtn:hover {
+  background: #e64900;
 }
