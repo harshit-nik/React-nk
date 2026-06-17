@@ -7,6 +7,8 @@ import Body from "./components/BodyComponent";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Cart from "./components/Cart";
 import { CartProvider } from "./components/utils/CartContext";
+import About from "./components/About";
+import Contact from "./components/contact";
 
 const currYear = new Date().getFullYear();
 
@@ -37,10 +39,12 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <AppLayout />,
     children: [
-      { path: "/", element: <Body /> },
-      { path: "/restaurant/:id", element: <RestaurantMenu /> },
-      { path: "/cart", element: <Cart /> },
-    ],
+  { path: "/", element: <Body /> },
+  { path: "/about", element: <About /> },
+  { path: "/contact", element: <Contact /> },
+  { path: "/restaurant/:id", element: <RestaurantMenu /> },
+  { path: "/cart", element: <Cart /> },
+],
   },
 ]);
 
