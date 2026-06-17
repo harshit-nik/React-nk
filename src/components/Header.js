@@ -7,11 +7,14 @@ const Header = () => {
 
   return (
     <div className="header">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
-        alt="DelishBite"
-        className="logo"
-      />
+      <div className="logo-container">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
+          alt="DelishBite"
+          className="logo"
+        />
+        <h2 className="logo-text">🍔 DelishBite</h2>
+      </div>
 
       <div className="nav-items">
         <ul>
