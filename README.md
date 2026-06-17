@@ -1,94 +1,112 @@
-# 🍔 Swiggy Clone (React)
+# 🍔 DelishBite – Food Ordering Application
 
-A Swiggy-inspired food ordering web application built using React.
-This project demonstrates core frontend concepts like routing, state management, and UI rendering.
+A modern food ordering web application built using React.js. DelishBite allows users to browse restaurants, search for food outlets, explore menus, and manage cart items through an intuitive and responsive interface.
 
----
+## 🚀 Live Demo
 
-## 🚀 Features
+🔗 **Live Website:** https://react-nk.vercel.app
+
+## ✨ Features
 
 * 🔍 Search restaurants by name
 * ⭐ Filter top-rated restaurants
-* 🛒 Add to cart functionality with quantity control
+* 🍽️ Browse restaurant menus
+* 🛒 Add items to cart
+* ➕ Increase and decrease item quantity
+* ⚡ Context API based cart state management
 * 🔄 Dynamic routing using React Router
-* 💀 Shimmer loading UI for better UX
-* 📱 Responsive layout
-
----
+* 💀 Shimmer loading UI for enhanced user experience
+* ℹ️ About Us and Contact Us pages
+* 📱 Responsive user interface
 
 ## 🛠️ Tech Stack
 
-* React (Hooks)
+* React.js
 * React Router DOM
-* Parcel (Bundler)
-* CSS
-
----
-
-## 🌐 Live Demo
-
-⚠️ Deployment in progress (API limitations due to CORS restrictions)
-
----
+* Context API
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* Parcel Bundler
+* Git & GitHub
+* Vercel
 
 ## 📂 Project Structure
 
-```
+```text
 src/
- ├── components/
- │   ├── BodyComponent.js
- │   ├── Header.js
- │   ├── RestaurantCard.js
- │   ├── RestaurantMenu.js
- │   ├── Cart.js
- │   └── Shimmer.js
- ├── utils/
- │   ├── CartContext.js
- │   └── mockData.js
- ├── App.js
- └── index.js
+├── components/
+│   ├── Header.js
+│   ├── BodyComponent.js
+│   ├── RestaurantCard.js
+│   ├── RestaurantMenu.js
+│   ├── Cart.js
+│   ├── About.js
+│   ├── Contact.js
+│   ├── Shimmer.js
+│   └── utils/
+│       ├── CartContext.js
+│       ├── constants.js
+│       └── mockData.js
+│
+├── App.js
+└── index.js
 ```
-
----
 
 ## ⚙️ Installation & Setup
 
-1. Clone the repository
+### Clone Repository
 
-```
+```bash
 git clone https://github.com/harshit-nik/React-nk.git
 ```
 
-2. Navigate to project
+### Navigate to Project Folder
 
-```
+```bash
 cd React-nk
 ```
 
-3. Install dependencies
+### Install Dependencies
 
-```
+```bash
 npm install
 ```
 
-4. Start development server
+### Run Development Server
 
-```
+```bash
 npm start
 ```
 
----
+## 🎯 Key Learnings
 
-## 🧠 Learnings
+* React Component Architecture
+* React Hooks (useState, useEffect, useContext)
+* Context API State Management
+* Dynamic Routing with React Router
+* Cart Functionality Implementation
+* UI Rendering & Reusable Components
+* Loading States using Shimmer UI
+* Git & GitHub Workflow
+* Frontend Deployment using Vercel
 
-* Understanding of React component structure
-* State management using hooks
-* Handling API data and loading states
-* Implementing cart logic
-* Debugging real-world issues (CORS, deployment, routing)
+## 🚀 Future Improvements
 
----
+* User Authentication
+* Backend Integration
+* Order History
+* Payment Gateway Integration
+* Wishlist / Favorites
+* Fully Responsive Mobile Design
 
 ## 👨‍💻 Author
 
 **Harshit Katiyar**
+
+* GitHub: https://github.com/harshit-nik
+* LinkedIn: https://www.linkedin.com/in/harshit-katiyar-5362a92ba
+
+## 🌟 Support
+
+If you found this project useful, consider giving the repository a ⭐.
